@@ -1,0 +1,68 @@
+.lang
+  position: relative
+  padding-left: 30px
+  &::before
+    content: ''
+    position: absolute
+    top: -8px
+    left: 0
+    width: 1px
+    height: 40px
+    background-color: rgba(#fff, 0.7)
+  &:hover
+    .lang
+      &__head
+        &::after
+          top: 12px
+          transform: rotate(135deg)
+      &__body
+        display: block
+  &__head
+    position: relative
+    font-size: 14px
+    color: rgba(#fff, 0.7)
+    padding: 0 13px 0 0
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      top: 8px
+      +size(6px)
+      border: 1px solid rgba(#fff, 0.7)
+      border-top-color: transparent
+      border-right-color: transparent
+      transform: rotate(-45deg)
+      +trans
+  &__body
+    display: none
+    position: absolute
+    top: 100%
+    left: 0
+    width: 150px
+    padding: 15px
+    background-color: #fff
+    box-shadow: 0 0 10px rgba(#000, 0.1)
+    animation: slideUp 0.25s ease
+    +trans
+    +r(480)
+      left: auto
+      right: 0
+  &__list
+    margin: 0
+    padding: 0
+    list-style: none
+    & > *:not(:last-child)
+      margin-bottom: 5px
+    a
+      font-size: 14px
+      color: $main-color
+      &:hover, &:focus
+        color: $accent
+
+@keyframes slideUp
+  0%
+    transform: translateY(20px)
+    opacity: 0
+  100%
+    transform: translateY(0)
+    opacity: 1

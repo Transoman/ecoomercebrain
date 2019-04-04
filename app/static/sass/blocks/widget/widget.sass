@@ -1,0 +1,170 @@
+.widget
+  border: 1px solid $concrete
+  background-color: #fff
+  margin-bottom: 40px
+  z-index: 10
+  &:first-child
+    margin-top: 80px
+  &:last-child
+    margin-bottom: 0
+  .widgettitle
+    margin-bottom: 0
+    padding: 10px 20px
+    background-color: $alabaster-2
+    font-size: 24px
+    font-weight: 500
+    border-bottom: 1px solid $concrete
+  ul:not(.socials)
+    margin: 0
+    padding: 40px 20px
+    list-style: none
+    li
+      position: relative
+      font-size: 16px
+      margin-bottom: 10px
+      padding-left: 20px
+      &::before
+        content: ''
+        position: absolute
+        top: 10px
+        left: 0
+        +size(5px)
+        border-radius: 50%
+        background-color: $accent
+      &:last-child
+        margin-bottom: 0
+    a
+      color: $main-color
+      font-weight: 400
+      &:hover, &:focus
+        color: $accent
+
+
+.widget_text
+  padding: 40px
+  background-color: $accent
+  text-align: center
+  +r(1200)
+    padding: 20px
+  .widgettitle
+    background: none
+    border: none
+    padding: 0
+    margin-bottom: 20px
+    font-size: 36px
+    color: #fff
+    line-height: 1.3
+    +r(1200)
+      font-size: 26px
+  p
+    margin-bottom: 30px
+    font-size: 16px
+    color: $coconut-cream
+  .btn
+    padding-right: 50px
+    padding-left: 50px
+
+.widget_search
+  border: 0
+  .searchform
+    position: relative
+    input[type="text"]
+      background-color: $alabaster-2
+      border: 1px solid $alto
+    button[type="submit"]
+      position: absolute
+      right: 30px
+      top: 23px
+      padding: 0
+      background: none
+      border: none
+      cursor: pointer
+      font-size: 14px
+      color: $main-color
+      +trans
+      &:hover
+        color: $accent
+      &:focus
+        outline: none
+
+.widget_profile_widget
+  border: 0
+
+.widget-about
+  border: 1px solid $accent
+  text-align: center
+  padding: 0 40px 40px
+  +r(1200)
+    padding: 0 20px 40px
+  &__img
+    +size(140px)
+    margin: -75px auto 20px
+    border-radius: 50%
+    border: 1px solid $accent
+    overflow: hidden
+    img
+      width: 100%
+  &__title
+    margin-bottom: 20px
+    font-size: 24px
+  &__desc
+    margin-bottom: 15px
+    font-size: 16px
+    font-weight: 400
+    p
+      &:last-child
+        margin-bottom: 0
+  &__socials
+    justify-content: center
+    .socials
+      &__icon
+        font-size: 18px
+        color: $silver-chalice
+        &:hover
+          color: $accent
+
+.widget_rating
+  .widgettitle
+    background-color: $accent
+    color: #fff
+    text-align: center
+    font-size: 22px
+
+.widget-rating
+  &__item
+    display: flex
+    align-items: center
+    padding: 20px
+    border-bottom: 1px solid $concrete
+    &:last-child
+      border-bottom: 0
+    & > *:not(:last-child)
+      margin-right: 20px
+      +r(992)
+        margin-right: 10px
+  &__logo
+    img
+      max-width: 120px
+      +r(1200)
+        max-width: 70px
+  &__score
+    flex-shrink: 0
+    font-size: 42px
+    font-weight: 500
+    line-height: 1
+    +r(1200)
+      font-size: 32px
+    &-wrap
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      align-items: center
+    &-desc
+      font-size: 12px
+      white-space: nowrap
+  &__btn
+    padding: 8px 10px
+    font-size: 10px
+    &-wrap
+      flex-shrink: 0
+      margin-left: auto

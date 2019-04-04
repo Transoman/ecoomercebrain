@@ -1,0 +1,43 @@
+.how
+  background: linear-gradient(165deg, rgba(#fff,1) 50%, rgba($alabaster,1) 50%)
+  .section-title
+    margin-bottom: 60px
+    +r(767)
+      margin-bottom: 30px
+  img
+    border-radius: 10px
+    box-shadow: 0 20px 60px rgba($main-color, 0.15)
+    +r(992)
+      display: block
+      margin: 0 auto
+  &__content
+    padding-right: 75px
+    +r(1200)
+      padding-right: 0
+    +r(992)
+      margin-bottom: 20px
+    h3
+      margin-bottom: 20px
+      font-size: 20px
+      +r(767)
+        font-size: 16px
+    p
+      margin-bottom: 10px
+      &:last-of-type
+        margin-bottom: 0
+    .btn-wrap
+      margin-top: 40px
+      a
+        +r(576)
+          display: block
+          max-width: 380px
+          margin: 0 auto 0
+    &--right
+      padding-right: 0
+      padding-left: 75px
+      +r(1200)
+        padding-left: 0
+  .row
+    margin-bottom: 45px
+    &:last-child
+      margin-bottom: 0

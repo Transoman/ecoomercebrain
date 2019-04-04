@@ -1,0 +1,118 @@
+.footer
+  padding: 50px 0
+  background-color: $accent
+  border-top: 1px solid $feijoa
+  +r(767)
+    padding-bottom: 30px
+  &__top
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    +r(992)
+      flex-direction: column
+    +r(576)
+      margin-bottom: 20px
+  &__bottom
+    display: flex
+    align-items: center
+    +r(767)
+      flex-direction: column
+    &-left
+      display: flex
+      align-items: center
+      +r(480)
+        flex-direction: column
+      & > *:not(:last-child)
+        margin-right: 25px
+        +r(480)
+          margin-right: 0
+          margin-bottom: 10px
+      a
+        font-size: 14px
+        color: $fern-froud
+        text-decoration: underline
+        +r(480)
+          margin-bottom: 10px
+        &:hover
+          color: $main-color
+          text-decoration: none
+    &-right
+      margin-left: auto
+      +r(767)
+        margin-left: 0
+        margin-bottom: 30px
+        order: -1
+      +r(576)
+        margin-bottom: 20px
+  &__lang
+    margin-left: 30px
+    &:hover
+      .lang__body
+        top: auto
+        bottom: 100%
+  &__nav
+    margin-left: auto
+    +r(992)
+      margin-left: 0
+      margin-top: 30px
+    .nav-list
+      +r(767)
+        flex-direction: column
+      & > *:not(:last-child)
+        +r(1200)
+          margin-right: 25px
+        +r(767)
+          margin-right: 0
+      li
+        +r(767)
+          text-align: center
+        &.menu-item-has-children
+          &:hover
+            > .sub-menu
+              top: auto
+              bottom: 100%
+              z-index: 10
+          +r(767)
+            > a
+              position: relative
+              &::after
+                content: '+'
+                font-size: 16px
+                color: #fff
+                position: absolute
+                right: -15px
+                top: -1px
+        .sub-menu
+          +r(767)
+            display: none
+            transition: none
+          li
+            &:hover
+              > .sub-menu
+                top: auto
+                bottom: 0
+      .sub-menu
+        +r(767)
+          position: static
+          top: auto
+          left: auto
+          background: none
+          box-shadow: none
+          margin: 5px 0
+          li
+            padding: 0
+            &:first-child, &:last-child
+              padding: 0
+            &.current-menu-item
+              > a
+                text-decoration: underline
+            a
+              font-size: 16px
+              color: #fff
+  &__logo
+    font-size: 30px
+    // margin-right: 30px
+    +r(1200)
+      font-size: 24px
+    +r(576)
+      font-size: 20px

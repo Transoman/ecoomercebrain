@@ -1,0 +1,33 @@
+.socials
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  align-items: center
+  & > *:not(:last-child)
+    margin-right: 15px
+  &__icon
+    font-size: 14px
+    color: $fern-froud
+    +trans
+    &:hover
+      color: $main-color
+
+.social-wrap
+  display: flex
+  align-items: center
+
+.social-label
+  margin-right: 20px
+  font-size: 14px
+  color: $fern-froud
+  +r(992)
+    display: none
+  // &::after
+  //   content: ''
+  //   display: inline-block
+  //   vertical-align: middle
+  //   width: 50px
+  //   height: 1px
+  //   margin: 0 20px
+  //   background-color: $fern-froud

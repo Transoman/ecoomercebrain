@@ -1,0 +1,150 @@
+.article
+  &__top
+    margin-bottom: 70px
+    padding-bottom: 70px
+    text-align: center
+    border-bottom: 1px solid $alto
+  &__cat
+    margin-bottom: 20px
+    font-size: 16px
+    font-weight: 400
+    text-transform: uppercase
+  &__title
+    margin-bottom: 15px
+    font-size: 48px
+    line-height: 1.3
+    +r(1200)
+      font-size: 38px
+    +r(767)
+      font-size: 28px
+  .blog-list__bottom
+    justify-content: center
+  &__content
+    padding-right: 70px
+    margin-bottom: 40px
+    +r(1200)
+      padding-right: 0
+    // h2
+    //   font-size: 24px
+    //   +r(992)
+    //     font-size: 22px
+    //   +r(767)
+    //     font-size: 20px
+    strong, b
+      color: $accent
+      font-weight: 500
+    p
+      &:last-child
+        margin-bottom: 0
+    .wp-block-image
+      margin: 50px 0 60px
+    img
+      border-radius: 10px
+      box-shadow: 0 20px 60px rgba($main-color, 0.15)
+  &__share
+    &-bottom
+      display: flex
+      +r(767)
+        margin-bottom: 50px
+      +r(576)
+        flex-direction: column
+    &-title
+      margin-right: 20px
+      font-size: 24px
+      font-weight: 700
+
+.sharrre
+  width: 40px
+  height: 60px
+  cursor: pointer
+  .box
+    height: 100%
+    float: none
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 6px 12px
+    border-radius: 3px
+    +trans
+    i
+      font-size: 16px
+    .share
+      width: auto
+      margin: 0
+      background: none
+    .count
+      padding: 0
+      margin-left: 10px
+      background: none
+      width: auto
+      height: auto
+      line-height: 1.3
+      color: #fff
+      font-weight: 700
+      font-size: 16px
+  &.twitter
+    .box
+      background-color: #1ba6ff
+      &:hover
+        background-color: darken(#1ba6ff, 5%)
+      &:active
+        background-color: darken(#1ba6ff, 8%)
+  &.facebook
+    .box
+      background-color: #1164bb
+      &:hover
+        background-color: darken(#1164bb, 5%)
+      &:active
+        background-color: darken(#1164bb, 8%)
+  &.googlePlus
+    .box
+      background-color: #e5362e
+      &:hover
+        background-color: darken(#e5362e, 5%)
+      &:active
+        background-color: darken(#e5362e, 8%)
+  &.linkedin
+    .box
+      background-color: #0077b5
+      &:hover
+        background-color: darken(#0077b5, 5%)
+      &:active
+        background-color: darken(#0077b5, 8%)
+
+.sharrre-container
+  display: flex
+  flex-wrap: wrap
+  .sharrre
+    width: auto
+    min-width: 80px
+    height: 40px
+    margin-bottom: 5px
+  & > *:not(:last-child)
+    margin-right: 5px
+
+.share-post
+  position: fixed
+  transform: translateX(-100%)
+  +trans
+  z-index: 10
+  +r(767)
+    display: none
+  &.stick
+    transform: translateX(0)
+  &.invisible
+    opacity: 0
+    visibility: hidden
+  .sharrre
+    .box
+      flex-direction: column
+      border-radius: 0
+      .count
+        margin-left: 0
+        margin-top: 10px
+        font-size: 13px
+    &.twitter
+      .box
+        border-radius: 0 3px 0 0
+    &.linkedin
+      .box
+        border-radius: 0 0 3px 0

@@ -1,0 +1,103 @@
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?lwifn2');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?lwifn2#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?lwifn2') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?lwifn2') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?lwifn2##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.ebrain-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ebrain-icon-pinterest {
+  &:before {
+    content: $ebrain-icon-pinterest; 
+  }
+}
+.ebrain-icon-arrow-circle {
+  &:before {
+    content: $ebrain-icon-arrow-circle; 
+  }
+}
+.ebrain-icon-curv-arrow {
+  &:before {
+    content: $ebrain-icon-curv-arrow; 
+  }
+}
+.ebrain-icon-facebook-fill {
+  &:before {
+    content: $ebrain-icon-facebook-fill; 
+  }
+}
+.ebrain-icon-linkedin-fill {
+  &:before {
+    content: $ebrain-icon-linkedin-fill; 
+  }
+}
+.ebrain-icon-blog {
+  &:before {
+    content: $ebrain-icon-blog; 
+  }
+}
+.ebrain-icon-facebook {
+  &:before {
+    content: $ebrain-icon-facebook; 
+  }
+}
+.ebrain-icon-instagram {
+  &:before {
+    content: $ebrain-icon-instagram; 
+  }
+}
+.ebrain-icon-linkedin {
+  &:before {
+    content: $ebrain-icon-linkedin; 
+  }
+}
+.ebrain-icon-loupe {
+  &:before {
+    content: $ebrain-icon-loupe; 
+  }
+}
+.ebrain-icon-repairing-service {
+  &:before {
+    content: $ebrain-icon-repairing-service; 
+  }
+}
+.ebrain-icon-search {
+  &:before {
+    content: $ebrain-icon-search; 
+  }
+}
+.ebrain-icon-tablet {
+  &:before {
+    content: $ebrain-icon-tablet; 
+  }
+}
+.ebrain-icon-twitter {
+  &:before {
+    content: $ebrain-icon-twitter; 
+  }
+}
+.ebrain-icon-youtube {
+  &:before {
+    content: $ebrain-icon-youtube; 
+  }
+}
+

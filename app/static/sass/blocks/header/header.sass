@@ -1,0 +1,84 @@
+.header
+  position: relative
+  padding: 100px 0 25px
+  background-color: $accent
+  z-index: 10
+  +r(1200)
+    padding-top: 70px
+  +r(767)
+    padding-top: 25px
+  +r(576)
+      padding: 15px 0
+  .container
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    +r(992)
+      justify-content: space-between
+  // &__logo
+  //   margin-right: 30px
+  //   +r(480)
+  //     margin-right: 20px
+  .lang
+    margin-left: 30px
+    +r(480)
+      margin-left: 20px
+      padding-left: 20px
+  &:not(.header--inner)
+    .nav
+      +rmin(993)
+        display: none
+  &--inner
+    padding: 25px 0
+    +r(576)
+      padding: 15px 0
+    .container
+      justify-content: flex-start
+  &__nav
+    +r(992)
+      position: fixed
+      top: 0
+      right: 0
+      height: 100%
+      background: #fff
+      width: 320px
+      padding: 30px 15px
+      flex-direction: column
+      align-items: flex-start
+      z-index: 10
+      box-shadow: 0 0 10px rgba($main-color, 0.15)
+      transform: translateX(100%)
+      +trans
+      overflow-y: auto
+      &.open
+        transform: translateX(0)
+      .nav-list
+        display: block
+        margin-bottom: 30px
+        & > *:not(:last-child)
+          margin-right: 0
+          margin-bottom: 10px
+        li
+          &.current-menu-item
+            > a
+              color: $accent
+              text-decoration: none
+        a
+          color: $main-color
+      .sub-menu
+        display: block
+        position: static
+        width: auto
+        padding: 0 0 0 10px
+        margin-top: 10px
+        box-shadow: none
+        & > *:not(:last-child)
+          margin-bottom: 10px
+        li
+          padding: 0
+        a
+          font-size: 16px
+          &:hover, &:focus
+            color: $main-color
+            text-decoration: underline

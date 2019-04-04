@@ -1,0 +1,28 @@
+.logos
+  padding: 50px 0
+  background-color: $alabaster
+  +r(767)
+    padding-bottom: 30px
+  &__list
+    display: flex
+    align-items: center
+    +r(767)
+      padding-bottom: 50px
+    & > *:not(:last-child)
+      margin-right: 70px
+      +r(767)
+        margin-right: 0
+    .swiper-wrapper
+      align-items: center
+    .swiper-pagination-bullet-active
+      background-color: $accent
+  &__item
+    text-align: center
+  &.bg-green
+    background: $accent
+    padding-bottom: 110px
+    +r(767)
+      padding-bottom: 50px
+    .logos__list
+      .swiper-pagination-bullet-active
+        background-color: #fff

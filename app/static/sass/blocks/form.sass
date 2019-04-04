@@ -1,0 +1,51 @@
+.form-row
+  display: flex
+  flex-wrap: wrap
+
+.form-group
+  margin-bottom: 10px
+
+input, textarea, select
+  &:focus
+    outline: none
+
+input:not([type="submit"]),
+textarea,
+select
+  display: block
+  width: 100%
+  padding: 20px 30px
+  color: $scorpion
+  border-radius: 5px
+  border: none
+  background: #fff
+  box-shadow: none
+  font-size: 14px
+  font-weight: 400
+
+select
+  appearance: none
+
+.searchform
+  position: relative
+  input[type="text"]
+    background-color: $alabaster-2
+    border: 1px solid $alto
+  button[type="submit"]
+    position: absolute
+    right: 30px
+    top: 23px
+    padding: 0
+    background: none
+    border: none
+    cursor: pointer
+    font-size: 14px
+    color: $main-color
+    +trans
+    &:hover
+      color: $accent
+    &:focus
+      outline: none
+
+div.wpcf7-validation-errors
+  color: #fff

@@ -1,0 +1,71 @@
+.search-header
+  margin-left: 35px
+  +r(992)
+    margin-left: 0
+    width: 100%
+  &__icon
+    display: block
+    +size(20px)
+    font-size: 14px
+    color: #fff
+    &:hover
+      color: rgba(#fff, 0.8)
+    +r(992)
+      display: none
+    &.active
+      position: relative
+      &::before, &::after
+        content: ''
+        position: absolute
+        left: 0
+        top: 10px
+        display: block
+        width: 100%
+        height: 1px
+        background-color: #fff
+      &::before
+        transform: rotate(45deg)
+      &::after
+        transform: rotate(-45deg)
+      i
+        display: none
+  &__body
+    position: absolute
+    top: -5px
+    right: 50px
+    width: 60px
+    visibility: hidden
+    opacity: 0
+    +trans
+    +r(992)
+      position: static
+      top: auto
+      right: auto
+      opacity: 1
+      visibility: visible
+      width: 100%
+    &.active
+      width: 60%
+      visibility: visible
+      opacity: 1
+  &__form
+    position: relative
+    input[type="text"]
+      width: 100%
+      +r(992)
+        background-color: $concrete
+    button[type="submit"]
+      position: absolute
+      right: 15px
+      top: 17px
+      padding: 0
+      background: none
+      border: none
+      cursor: pointer
+      font-size: 18px
+      color: $main-color
+      +trans
+      &:hover
+        color: $accent
+      &:focus
+        outline: none
