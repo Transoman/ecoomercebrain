@@ -7,10 +7,10 @@ let gp = require('gulp-load-plugins')(),
 module.exports = function () {
     $.gulp.task('libsJS:dev', () => {
         return $.gulp.src([
-            'node_modules/svg4everybody/dist/svg4everybody.min.js',
+            // 'node_modules/svg4everybody/dist/svg4everybody.min.js',
             // 'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/jquery-popup-overlay/jquery.popupoverlay.js',
-            'node_modules/swiper/dist/js/swiper.min.js',
+            // 'node_modules/jquery-popup-overlay/jquery.popupoverlay.js',
+            // 'node_modules/swiper/dist/js/swiper.min.js',
             'node_modules/sharrre/jquery.sharrre.min.js'
             ])
             .pipe(gp.concat('libs.min.js'))
@@ -19,10 +19,10 @@ module.exports = function () {
 
     $.gulp.task('libsJS:build', () => {
         return $.gulp.src([
-            'node_modules/svg4everybody/dist/svg4everybody.min.js',
+            // 'node_modules/svg4everybody/dist/svg4everybody.min.js',
             // 'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/jquery-popup-overlay/jquery.popupoverlay.js',
-            'node_modules/swiper/dist/js/swiper.min.js',
+            // 'node_modules/jquery-popup-overlay/jquery.popupoverlay.js',
+            // 'node_modules/swiper/dist/js/swiper.min.js',
             'node_modules/sharrre/jquery.sharrre.min.js'
             ])
             .pipe(gp.concat('libs.min.js'))

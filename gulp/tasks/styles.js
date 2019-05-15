@@ -18,6 +18,7 @@ module.exports = function () {
                 })
             ]))
             .pipe(gp.sourcemaps.write())
+            .pipe(gp.csslint())
             .pipe(gp.rename('styles.min.css'))
             .pipe($.gulp.dest(stylesPATH.ouput))
             .pipe($.browserSync.stream());
@@ -32,6 +33,7 @@ module.exports = function () {
                     cascade: false
                 })
             ]))
+            .pipe(gp.csslint())
             .pipe(gp.csscomb())
             .pipe($.gulp.dest(stylesPATH.ouput))
     });

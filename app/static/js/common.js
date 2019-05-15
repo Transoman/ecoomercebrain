@@ -8,64 +8,64 @@ jQuery(document).ready(function($) {
   });
 
   // Modal
-  $('.modal').popup({
-    transition: 'all 0.3s',
-    onclose: function() {
-      $(this).find('label.error').remove();
-    }
-  });
+  // $('.modal').popup({
+  //   transition: 'all 0.3s',
+  //   onclose: function() {
+  //     $(this).find('label.error').remove();
+  //   }
+  // });
 
   // $('a[href="#"]').click(function (e) {
   //   e.preventDefault();
   // });
 
   // Enable swiper
-  var breakpoint = window.matchMedia( '(min-width: 768px)' );
-  var partnerSlider;
+  // var breakpoint = window.matchMedia( '(min-width: 768px)' );
+  // var partnerSlider;
 
-  var breakpointChecker = function() {
-    // if larger viewport and multi-row layout needed
-    if ( breakpoint.matches === true ) {
-        // clean up old instances and inline styles when available
-        if ( partnerSlider !== undefined ) {
-          if ($('.logos__list').length) {
-            $('.logos__list').removeClass('swiper-container');
-            $('.logos__item').unwrap('.swiper-wrapper');
-            $('.logos__item').removeClass('swiper-slide');
-            $('.logos__list .swiper-pagination').remove();
-            partnerSlider.destroy( true, true );
-          }
-        }
-        // or/and do nothing
-        return;
-     // else if a small viewport and single column layout needed
-     } else if ( breakpoint.matches === false ) {
-        // fire small viewport version of swiper
-        return enableSwiper();
-     }
-  };
+  // var breakpointChecker = function() {
+  //   // if larger viewport and multi-row layout needed
+  //   if ( breakpoint.matches === true ) {
+  //       // clean up old instances and inline styles when available
+  //       if ( partnerSlider !== undefined ) {
+  //         if ($('.logos__list').length) {
+  //           $('.logos__list').removeClass('swiper-container');
+  //           $('.logos__item').unwrap('.swiper-wrapper');
+  //           $('.logos__item').removeClass('swiper-slide');
+  //           $('.logos__list .swiper-pagination').remove();
+  //           partnerSlider.destroy( true, true );
+  //         }
+  //       }
+  //       // or/and do nothing
+  //       return;
+  //    // else if a small viewport and single column layout needed
+  //    } else if ( breakpoint.matches === false ) {
+  //       // fire small viewport version of swiper
+  //       return enableSwiper();
+  //    }
+  // };
 
-  var enableSwiper = function() {
-    $('.logos__list').addClass('swiper-container');
-    if (! $('.logos__list .swiper-wrapper').length ) {
-      $('.logos__item').wrapAll('<div class="swiper-wrapper"></div>');
-    }
-    $('.logos__item').addClass('swiper-slide');
-    $('.logos__list').append('<div class="swiper-pagination"></div>');
+  // var enableSwiper = function() {
+  //   $('.logos__list').addClass('swiper-container');
+  //   if (! $('.logos__list .swiper-wrapper').length ) {
+  //     $('.logos__item').wrapAll('<div class="swiper-wrapper"></div>');
+  //   }
+  //   $('.logos__item').addClass('swiper-slide');
+  //   $('.logos__list').append('<div class="swiper-pagination"></div>');
 
-    partnerSlider = new Swiper ('.logos__list', {
-      slidesPerView: 1,
-      spaceBetween: 15,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-  }
+  //   partnerSlider = new Swiper ('.logos__list', {
+  //     slidesPerView: 1,
+  //     spaceBetween: 15,
+  //     pagination: {
+  //       el: '.swiper-pagination',
+  //     },
+  //   });
+  // }
 
-  // keep an eye on viewport size changes
-  breakpoint.addListener(breakpointChecker);
-  // kickstart
-  breakpointChecker();
+  // // keep an eye on viewport size changes
+  // breakpoint.addListener(breakpointChecker);
+  // // kickstart
+  // breakpointChecker();
 
   if ($(window).width() < 768) {
     $('.footer__nav li.menu-item-has-children > a').click(function(e) {
@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
   // Ajax load more
   $('body').on('click', '.load-more', function(e) {
     e.preventDefault();
-    $(this).text('Load...');
+    $(this).text('Loading...');
   
     var data = {
       'action': 'load_more_post',
@@ -116,7 +116,8 @@ jQuery(document).ready(function($) {
       twitter: true,
     },
     enableHover: false,
-    template: '<div class="box"><div class="share"><i class="ebrain-icon ebrain-icon-twitter"></i></div> <span class="count">{total}</span></div>',
+    enableCounter: false,
+    template: '<div class="box"><div class="share"><i class="ebrain-icon ebrain-icon-twitter"></i></div></div>',
     buttons: { twitter: {}},
     click: function(api, options){
       api.simulateClick();
@@ -129,7 +130,8 @@ jQuery(document).ready(function($) {
       facebook: true,
     },
     enableHover: false,
-    template: '<div class="box"><div class="share"><i class="ebrain-icon ebrain-icon-facebook"></i></div> <span class="count">{total}</span></div>',
+    enableCounter: false,
+    template: '<div class="box"><div class="share"><i class="ebrain-icon ebrain-icon-facebook"></i></div></div>',
     buttons: { facebook: {}},
     click: function(api, options){
       api.simulateClick();
@@ -142,7 +144,8 @@ jQuery(document).ready(function($) {
       googlePlus: true,
     },
     enableHover: false,
-    template: '<div class="box"><div class="share"><i class="ebrain-icon ebrain-icon-facebook"></i></div> <span class="count">{total}</span></div>',
+    enableCounter: false,
+    template: '<div class="box"><div class="share"><i class="ebrain-icon ebrain-icon-facebook"></i></div></div>',
     buttons: { googlePlus: {}},
     click: function(api, options){
       api.simulateClick();
@@ -154,7 +157,8 @@ jQuery(document).ready(function($) {
       linkedin: true,
     },
     enableHover: false,
-    template: '<div class="box"><div class="share"><i class="ebrain-icon ebrain-icon-linkedin"></i></div> <span class="count">{total}</span></div>',
+    enableCounter: false,
+    template: '<div class="box"><div class="share"><i class="ebrain-icon ebrain-icon-linkedin"></i></div></div>',
     buttons: { linkedin: {}},
     click: function(api, options){
       api.simulateClick();
@@ -184,6 +188,6 @@ jQuery(document).ready(function($) {
   });
 
   // SVG
-  svg4everybody({});
+  // svg4everybody({});
 
 });
